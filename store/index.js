@@ -17,5 +17,5 @@ export default (initialState = initState) =>
   createStore(
     reducer,
     initialState,
-    applyMiddleware(thunkMiddleware, logger)
+    composeWithDevTools(applyMiddleware(thunkMiddleware, logger))
   );

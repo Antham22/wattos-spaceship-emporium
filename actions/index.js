@@ -6,6 +6,7 @@ export const getSpaceships = () => async dispatch => {
   try {
     const res = await fetch('http://demo7475333.mockable.io/spaceships');
     const { products } = await res.json();
+    dispatch({type: actionTypes.FETCH_SPACESHIPS_SUCCESS });
     dispatch({ type: actionTypes.LOAD_SPACESHIPS, payload: products });
   } catch (e) {
     console.log(e)
