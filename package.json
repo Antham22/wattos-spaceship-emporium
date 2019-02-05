@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "install": "^0.12.2",
+    "next": "^7.0.2",
+    "next-redux-wrapper": "^3.0.0-alpha.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "name": "wattos-space-emporium",
+  "version": "1.0.0",
+  "description": "A website for Watto's Used Spaceship Dealership",
+  "main": "index.js",
+  "author": "Antham22",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
