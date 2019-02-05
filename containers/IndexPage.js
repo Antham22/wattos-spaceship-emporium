@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from '../routes'
 
-export default class Index extends Component {
+export default class IndexPage extends Component {
   componentDidMount() {
     console.log(this.props)
   }

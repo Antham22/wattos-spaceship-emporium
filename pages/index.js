@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import Index from "../components/Index";
+import IndexPage from "../containers/IndexPage";
 import { getSpaceships } from "../actions";
 
-Index.getInitialProps = async ({store, isServer}) => {
+IndexPage.getInitialProps = async ({store, isServer}) => {
     await store.dispatch(getSpaceships());
   // const { spaceships } = await store.getState();
   // console.log(spaceships)
@@ -16,4 +16,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Index);
+export default connect(mapStateToProps)(IndexPage);
