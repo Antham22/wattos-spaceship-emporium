@@ -15,7 +15,7 @@ export default class IndexPage extends Component {
         {spaceships.map((spaceship, index) => {
           return (
             <li key={index}>
-              <Link route='spaceship' params={{name: spaceship.name}}>
+              <Link route='spaceship' params={{slug: spaceship.slug}}>
                 <a>{spaceship.name}</a>
               </Link>
             </li>

@@ -10,7 +10,6 @@ const initState = {
     error:""
   },
   spaceships: [],
-  cart: []
 };
 
 export default (initialState = initState) =>

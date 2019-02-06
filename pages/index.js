@@ -4,15 +4,16 @@ import { getSpaceships } from "../actions";
 
 IndexPage.getInitialProps = async ({store, isServer}) => {
     await store.dispatch(getSpaceships());
-  // const { spaceships } = await store.getState();
+  const { spaceships } = await store.getState();
   // console.log(spaceships)
+  // return { spaceships }
 }
 
 const mapStateToProps = state => {
   return {
     loading: state.loading,
     spaceships: state.spaceships,
-    cart: state.carts
+    // cart: state.carts
   }
 }
 
