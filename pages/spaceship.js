@@ -1,27 +1,20 @@
 import { connect } from 'react-redux';
 import SpaceshipPage from "../containers/SpaceshipPage";
-import { getSpaceships } from '../actions';
-
-SpaceshipPage.getInitialProps = async ({store, isServer, query: { slug }}) => {
-  if (isServer) {
-    await store.dispatch(getSpaceships());
-  }
-  const { spaceships } = await store.getState();
-  const spaceshipsLoaded = spaceships.length;
-
-  if (!spaceshipsLoaded) {
-    await store.dispatch(getSpaceships());
-  }
-
-  const currentShip = await spaceships.find(item => item.slug === slug)
-  return { currentShip }
-}
+import { addToCart } from '../actions/cart';
 
 const mapStateToProps = state => {
   return {
     loading: state.loading,
     spaceships: state.spaceships,
+    cart: state.cart
   }
 }
 
-export default connect(mapStateToProps)(SpaceshipPage);
+const mapDispatchToProps = dispatch => ({
+  addToCart: spaceship => dispatch(addToCart(spaceship))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SpaceshipPage);

@@ -5,11 +5,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducer from '../reducers/index';
 
 const initState = {
-  loading: {
-    isLoading: false,
-    error:""
-  },
-  spaceships: [],
+  loading: {},
+  spaceships: []
 };
 
 export default (initialState = initState) =>
