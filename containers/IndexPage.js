@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from '../routes';
 import { getSpaceships } from '../actions';
 
-import Layout from '../components/layouts/Main';
+import Layout from '../components/layouts/Layout';
 
 export default class IndexPage extends Component {
   static async getInitialProps({store, req}) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getSpaceships } from "../actions";
 
-import Layout from '../components/layouts/Main';
+import Layout from '../components/layouts/Layout';
 
 export default class SpaceshipPage extends Component {
   static async getInitialProps({store, req, query: { slug }}) {

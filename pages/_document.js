@@ -15,11 +15,13 @@ export default class SiteDocument extends Document {
     return (
       <html>
         <Head>
+          <title>WSE | Watto's Spaceship Emporium</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
           {styleTags}
         </Head>
-        <body>
+        <body style={{margin: 0}}>
           <Main />
           <NextScript />
         </body>
