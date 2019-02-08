@@ -62,13 +62,13 @@ $ yarn start
 ## Authors
 
 * **Anthony A. Marin** - [Antham22](https://github.com/Antham22)
-## TDD
+## TTD
 * Add testing using [Jest](https://jestjs.io/)
-* Connect to app to [Firebase](https://firebase.google.com/)
+* Connect to app to database
 * Refactor...
 
 ## Feedback
-Please let us know on our
+Please let me know on the
 [issues page](https://github.com/Antham22/wattos-spaceship-emporium/issues) if you have any
 question or comment.
 
