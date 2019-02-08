@@ -17,7 +17,7 @@ const NavSection = styled.div`
   display: flex;
   align-items: center;
   ${props =>
-    props.primary &&
+    props.link &&
     css`
       cursor: pointer;
       &&:hover {
@@ -50,7 +50,7 @@ const CartTotal = styled.div`
 const Navbar = ({title, credits, cartTotal}) => (
   <Nav>
     <Link route="index">
-      <NavSection primary>
+      <NavSection link>
         <Brand src={logo}/>
         <div><h1>Watto's Space Emporium</h1></div>
       </NavSection>
@@ -59,7 +59,7 @@ const Navbar = ({title, credits, cartTotal}) => (
       <Credits>{`${parseInt(credits).toLocaleString()}` || 0}</Credits>
       <Coin src={coin} />
       <Link route="checkout">
-        <NavSection primary>
+        <NavSection link>
           <CartIcon src={cart} />
           <CartTotal>{cartTotal}</CartTotal>
         </NavSection>

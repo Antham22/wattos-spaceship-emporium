@@ -7,7 +7,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   main {
     flex: 1;
-    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    padding: 4% 4%;
   }
 `
 

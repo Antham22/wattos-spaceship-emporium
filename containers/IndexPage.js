@@ -3,6 +3,8 @@ import { Link } from '../routes';
 import { getSpaceships } from '../actions';
 
 import Layout from '../components/layouts/Layout';
+import IndexCard from '../components/IndexCard';
+import IndexList from '../components/IndexList';
 
 export default class IndexPage extends Component {
   static async getInitialProps({store, req}) {
@@ -23,17 +25,18 @@ export default class IndexPage extends Component {
         credits ={cart.credits}
         cartTotal={cart.items.length}>
           <h2>Spaceships</h2>
-          <>
-          {spaceships.map((spaceship, index) => {
-            return (
-              <li key={index}>
-                <Link route='spaceship' params={{slug: spaceship.slug}}>
-                  <a>{spaceship.name}</a>
-                </Link>
-              </li>
-            )
-          })}
-          </>
+          <IndexList>
+            <>
+              {spaceships.map((spaceship, index) =>
+                <IndexCard
+                  key={index}
+                  name={spaceship.name}
+                  price={spaceship.price}
+                  slug={spaceship.slug}
+                  />)}
+              <IndexCard dummy />
+            </>
+          </IndexList>
       </Layout>
     )
   }

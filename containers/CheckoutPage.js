@@ -2,23 +2,11 @@ import React, { Component } from 'react';
 import { removeFromCart } from "../actions/cart";
 
 import Layout from '../components/layouts/Layout';
+import CheckoutContainer from '../components/CheckoutContainer';
+import CheckoutList from '../components/CheckoutList';
+import Button from '../components/Button';
 
 export default class CheckoutPage extends Component {
-  static async getInitialProps({store, req, query: { slug }}) {
-    // if (req) {
-    //   await store.dispatch(getSpaceships())
-    // }
-    // const { spaceships } = await store.getState();
-    // const isSpaceshipsLoaded = spaceships.length;
-    //
-    // if (!isSpaceshipsLoaded) {
-    //   await store.dispatch(getSpaceships());
-    // }
-    //
-    // const currentShip = await spaceships.find(item => item.slug === slug);
-    // return { currentShip }
-  }
-
   generateTotal(items, option) {
     const total = items
     .map(i => parseInt(i.price.split(" ")[0].replace(/,/g, '')))
@@ -49,16 +37,19 @@ export default class CheckoutPage extends Component {
         credits={credits}
         cartTotal={items.length}>
         <h2>Checkout</h2>
-        <>
-        {items.length ? items.map((item, index) =>
-            <div key={index}>
-              <span>{item.name} - {item.price}</span>
-              <span><button onClick={()=>{this.handleRemoveFromCartClick(index)}}>Remove</button></span>
-            </div>
-        ) : <div>No items in cart!</div>}
-        </>
-      <h3>Total: {this.generateTotal(items)}</h3>
-      <button onClick={this.handlePurchaseClick}>Puchase</button>
+        <CheckoutContainer>
+          <CheckoutList items={items} handleRemoveFromCartClick={this.handleRemoveFromCartClick} />
+        <h3>Total: {this.generateTotal(items)}</h3>
+        {
+          items.length <= 0 ?
+          <Button
+            link
+             route="index"
+             text="conitnue shopping"
+          />
+        :<Button text="Puchase" handleClick={this.handlePurchaseClick} />
+        }
+        </CheckoutContainer>
       </Layout>
     )
   }
