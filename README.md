@@ -1,5 +1,5 @@
 # wattos-spaceship-emporium
-A simple eCommerce site built using Node, NextJS, Reac/Redux and Styled Components.
+A simple eCommerce site built using Node, NextJS, Reac/Redux and Styled Components, https://wattos-spaceship-emporium-store.now.sh/.
 
 ### Prerequisites
 
