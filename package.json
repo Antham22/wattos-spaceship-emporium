@@ -19,7 +19,7 @@
   },
   "name": "wattos-space-emporium",
   "version": "1.0.0",
-  "description": "A website for Watto's Used Spaceship Dealership",
+  "description": "An eCommerce app for Watto's Spaceship Emporium",
   "main": "index.js",
   "author": "Antham22",
   "license": "MIT",
