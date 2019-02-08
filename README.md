@@ -43,11 +43,12 @@ In order to deploy, you will need to build the project by running:
 ```
 $ yarn run build
 ```
-The build output is located in the .next directory and can be ran by running the following script in the main directory:
+The build output is located in the .next directory. Run the production build locally by running:
 
 ```
 $ yarn start
 ```
+Make sure you are in the main project directory and NOT the .next folder when building and running.
 
 ## Built With
 
@@ -64,7 +65,7 @@ $ yarn start
 * **Anthony A. Marin** - [Antham22](https://github.com/Antham22)
 ## TTD
 * Add testing using [Jest](https://jestjs.io/)
-* Connect to app to database
+* Connect app to database
 * Refactor...
 
 ## Feedback
