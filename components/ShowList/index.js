@@ -9,6 +9,9 @@ const Wrapper = styled.div`
   & li {
     padding: 5px 0;
     font-size 14px;
+    &:first-letter{
+      text-transform: capitalize
+    }
   }
 `
 
