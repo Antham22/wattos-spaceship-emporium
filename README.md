@@ -1,5 +1,5 @@
 # wattos-spaceship-emporium
-A simple eCommerce site built using Node, NextJS, Reac/Redux and Styled Components.
+A simple eCommerce site built using Node, NextJS, React/Redux and Styled Components, https://wattos-spaceship-emporium-store.now.sh/.
 
 ### Prerequisites
 
@@ -28,10 +28,10 @@ $ yarn dev
 ```
 
 Finally, shop around Watto's Spaceship Emporium by adding items to the cart and clicking the cart icon on the right corner of
-the navbar to checkout. I went ahead and put some credits in your account so you build your fleet. 
+the navbar to checkout. I went ahead and put some credits in your account so you can start building your fleet. 
 Watto's inventory is very limited so make sure you take advantage of any good deals.
 
-*NOTE: Currently the app is not saving any purchases to a database so all changes will be lost on page refresh. 
+*NOTE: The app is not saving any purchases to a database so all changes will be lost on page refresh. 
 
 ## Running the tests
 
@@ -43,7 +43,7 @@ In order to deploy, you will need to build the project by running:
 ```
 $ yarn run build
 ```
-The build output is located in the .next directory and can be ran by the following script in the main directory:
+The build output is located in the .next directory and can be ran by running the following script in the main directory:
 
 ```
 $ yarn start
@@ -62,13 +62,13 @@ $ yarn start
 ## Authors
 
 * **Anthony A. Marin** - [Antham22](https://github.com/Antham22)
-## TDD
+## TTD
 * Add testing using [Jest](https://jestjs.io/)
-* Connect to app to [Firebase](https://firebase.google.com/)
+* Connect to app to database
 * Refactor...
 
 ## Feedback
-Please let us know on our
+Please let me know on the
 [issues page](https://github.com/Antham22/wattos-spaceship-emporium/issues) if you have any
 question or comment.
 
